@@ -1,0 +1,20 @@
+<div class="text-center">
+    <img src="../../assets/img/ram-logo.png" class="img-fluid" alt="Responsive image" width="500px" />
+</div>
+<div>
+    <input type="text" class="form-control bg-dark text-light border-0 my-4 text-center"
+        style="width:50%; margin: auto; color: #000;" (keyup)="search()" [(ngModel)]="searchcaracter"
+        placeholder="Escribe aquí para buscar...">
+</div>
+
+<div class="card-container ">
+    @for (item of filteredDataList; track $index) {
+    <div class="card" style="width: 18rem;">
+        <img src={{item.image}} class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{item.name}}</h5>
+            <p class="card-text">{{item.species}}</p>
+        </div>
+    </div>
+    }
+</div>
